@@ -1,0 +1,30 @@
+Hi Corey,
+
+Wonderful - hope you're having fun in the US! The challenge is below. We typically give candidates a week to work on it, but if you need more time because of travels let me know :). I've also attached a doc with some info on Blockchain that you might find interesting!
+
+Please write a web app that accepts GET requests on the
+/address/:bitcoin_addr route, and responds with a JSON-formatted list
+of all unspent transaction outputs for that address, specifying the
+following for each such output:
+
+value
+transaction hash
+output index
+You might find our API useful to access that data (documentation at
+https://blockchain.info/api/blockchain_api, in particular you'll want
+to look at the address/ endpoints), but you are welcome to use any
+block explorer or some other alternative source for this information
+if you prefer.
+
+Usage example of the app you should develop:
+
+$ curl http://localhost:8080/address/1Aff4FgrtA1dZDwajmknWTwU2WtwUvfiXa
+{
+"outputs": [{
+"value": 63871,
+"txhash":
+"db9b6ff6ba4fd5813fe1ae8980ee30645221e333c0f647bb1fc777d0f58d3e23",
+"outputidx": 1
+}]
+}
+
